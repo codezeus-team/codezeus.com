@@ -1,4 +1,5 @@
-Django==1.9.6
+Django==1.11
+gunicorn==19.7
 bpython==0.15
 django-crispy-forms==1.6.0
 django-extensions==1.6.7
