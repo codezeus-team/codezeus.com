@@ -1,4 +1,4 @@
-#!/bin/bash                                                                                          
+#!/bin/bash
 #
 # This Runs gunicorn from within the VirtualEnv
 # This is triggered by Upstart in /etc/init/gunicorn_apps.conf
@@ -16,6 +16,7 @@ exec /home/user/deploy/.virtualenvs/codezeus.com/bin/gunicorn wsgi:application \
   --name codezeus_com \
   --workers $worker_total \
   --log-level info \
+  --bind unix:codezeus.sock -m 007 \
   --log-syslog \
   --capture-output
 
