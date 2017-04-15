@@ -9,6 +9,7 @@ Required Drivers
 ```
 apt-get install libmysqlclient-dev
 apt-get install redis-server
+apt-get install letsencrypt
 ```
 
 Not Required, but for rememberance:
