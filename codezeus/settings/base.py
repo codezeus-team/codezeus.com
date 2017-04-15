@@ -151,3 +151,11 @@ WAGTAIL_SITE_NAME = "codezeus"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'https://codezeus.com'
 
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

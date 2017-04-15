@@ -5,6 +5,11 @@ Giving a CMS a whirl where custom Django is not interrupted hopefully - [Wagtail
 
 ## Install
 
+Required for MySQL Driver
+```
+apt-get install libmysqlclient-dev
+```
+
 Not Required, but for rememberance:
 ```
 pip3 install wagtail
@@ -20,12 +25,28 @@ Install Dependencies
 pip install -r requirements.txt
 ```
 
-Migrate
+## Configure
+Make a local.py which is ignored by git.
+```
+cp codezeus/settings/local.py.example codezeus/settings/local.py
+```
+
+Edit the file, you can delete the MySQL Connection to default to SQLite3
+```
+vim codezeus/settings/local.py
+```
+
+Whip up a database
+```
+mysql -u root -proot -e "CREATE DATABASE mydatabase CHARACTER SET utf8 COLLATE utf8_general_ci"
+```
+
+## Migrate
 ```
 ./manage.py migrate
 ```
 
-Create Admin
+## Create Admin
 ```
 ./manage.py createsuperuser
 ```
@@ -36,8 +57,10 @@ Runserver
 ```
 
 ## Login to CMS
+The main page will be blank until one is created.
+
 ```
-http://localhost:8000
+http://localhost:8000/admin
 ```
 
 ## Create Page
