@@ -7,7 +7,7 @@ For production change:            from .production import *
 """
 from .development import *
 
-SECRET_KEY = ''
+SECRET_KEY = 'ASECRETKEYHERE'
 
 # APPS = ('your_apps',)
 # INSTALLED_APPS += APPS
