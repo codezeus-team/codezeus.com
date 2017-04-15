@@ -5,9 +5,10 @@ Giving a CMS a whirl where custom Django is not interrupted hopefully - [Wagtail
 
 ## Install
 
-Required for MySQL Driver
+Required Drivers
 ```
 apt-get install libmysqlclient-dev
+apt-get install redis-server
 ```
 
 Not Required, but for rememberance:

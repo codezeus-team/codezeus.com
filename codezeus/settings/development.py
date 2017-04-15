@@ -11,6 +11,8 @@ SECRET_KEY = 'pe#(%v(n#6_l#-(66vfdeqe5l+2=qkoqnrje0-qbmeere10a#u'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# Debug Toolbar
+INTERNAL_IPS = ['127.0.0.1',]
 
 try:
     from .local import *
