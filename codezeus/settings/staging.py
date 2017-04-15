@@ -1,5 +1,4 @@
 """
-Production Settings
+Staging Settings
 """
 from .base import *
-
