@@ -7,9 +7,10 @@ Giving a CMS a whirl where custom Django is not interrupted hopefully - [Wagtail
 
 Required Drivers
 ```
-apt-get install libmysqlclient-dev
-apt-get install redis-server
-apt-get install letsencrypt
+apt install -y \
+    libmysqlclient-dev\
+    redis-server\
+    letsencrypt
 ```
 
 Not Required, but for rememberance:
